@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Owners</title>
+    <th:block th:insert="fragments/general.html :: css"></th:block>
 </head>
 <body>
 <h1 th:text="'List of Owners'">List of owners...</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
-        </thead>
 
-        <tbody>
-        <tr th:each="owner : ${owners}">
-            <td th:text="${owner?.getId()}"></td>
-            <td th:text="${owner?.getFirstName()}"></td>
-            <td th:text="${owner?.getLastName()}"></td>
-        </tr>
-        </tbody>
-    </table>
-
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner : ${owners}">
+        <th th:text="${owner?.getId()}" scope="row"></th>
+        <td th:text="${owner?.getFirstName()}"></td>
+        <td th:text="${owner?.getLastName()}"></td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>

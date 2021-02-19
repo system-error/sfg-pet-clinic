@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'vets')}">
 <head>
     <meta charset="UTF-8">
     <title>List of Vets</title>
-    <th:block th:insert="fragments/general.html :: css"></th:block>
+<!--    <th:block th:insert="fragments/general.html :: css"></th:block>-->
 </head>
 <body>
 <h1 th:text="'List of Vets'">List of vets...</h1>
 
 
-<table class="table">
-    <thead class="table-dark">
+<table class="table table-striped">
+    <thead >
     <tr>
         <th scope="col">Id</th>
         <th scope="col">First Name</th>

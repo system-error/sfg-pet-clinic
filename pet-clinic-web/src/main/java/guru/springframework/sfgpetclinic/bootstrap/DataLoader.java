@@ -18,6 +18,8 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
+    private String test;
+
 
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
